@@ -1,0 +1,13 @@
+<table class="tictactoe-board"> 
+    <body>
+        <tr *ngFor="let row of getCells(); let rowIx = index"> 
+            <td  *ngFor="let col of row; let colIx=index"
+            [class]="col.class" (click)="set(colIx, rowIx)">{{col.playerName}}</td>
+           
+        </tr>
+      
+    </body>
+</table> 
+
+<h2 [hidden]=" winnerIndex === 0"> The winner is {{ getWinnerName()}}</h2>
+<button (click)="onRestart()">Restart</button>

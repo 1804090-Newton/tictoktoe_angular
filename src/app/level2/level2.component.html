@@ -1,0 +1,24 @@
+<table class="tictactoe-board"> 
+    <body>
+        <tr> 
+            <td [class]="getstyle(0, 0)" (click)="set(0, 0)">{{getPlayerName(0, 0)}}</td>
+            <td [class]="getstyle(1, 0)" (click)="set(1, 0)">{{getPlayerName(1, 0)}}</td>
+            <td [class]="getstyle(2, 0)" (click)="set(2, 0)">{{getPlayerName(2, 0)}}</td>
+            
+        </tr>
+        <tr> 
+            <td [class]="getstyle(0, 1)" (click)="set(0, 1)">{{getPlayerName(0, 1)}}</td>
+            <td [class]="getstyle(1, 1)" (click)="set(1, 1)">{{getPlayerName(1, 1)}}</td>
+            <td [class]="getstyle(2, 1)" (click)="set(2, 1)">{{getPlayerName(2, 1)}}</td>
+            
+        </tr>
+        <tr> 
+            <td [class]="getstyle(0, 2)" (click)="set(0, 2)">{{getPlayerName(0, 2)}}</td>
+            <td [class]="getstyle(1, 2)" (click)="set(1, 2)">{{getPlayerName(1, 2)}}</td>
+            <td [class]="getstyle(2, 2)" (click)="set(2, 2)">{{getPlayerName(2, 2)}}</td>
+            
+        </tr>
+    </body>
+</table> 
+<h2 [hidden]=" winnerIndex === 0"> The winner is {{ getWinnerName()}}</h2>
+<button (click)="onRestart()">Restart</button>
